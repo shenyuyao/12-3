@@ -1,0 +1,19 @@
+html
+	head
+		meta(charset='utf-8')
+		title 首页
+		script(src='../public/javascripts/bootstrap.js')
+		script(src='../public/javascripts/jquery-1.11.3.js')
+		link(type='text/css' rel='stylesheet' href='../public/stylesheets/bootstrap.css')
+		link(type='text/css' rel='stylesheet' href='../public/stylesheets/style.css')
+	body
+		div.container
+			div.row
+				-for(var i in movies)
+					div.col-md-3
+						div.thumbnail
+							img(src="#{movies[i].poster}")
+						div.caption
+							h1=movies[i].title
+							p
+								a(href="/detail?#{movies[i]._id}").btn.btn-primary 观看影片

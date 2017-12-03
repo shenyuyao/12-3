@@ -1,0 +1,27 @@
+html
+	head
+		meta(charset='utf-8')
+		title 首页
+		script(src='../public/javascripts/bootstrap.js')
+		script(src='../public/javascripts/jquery-1.11.3.js')
+		link(type='text/css' rel='stylesheet' href='../public/stylesheets/bootstrap.css')
+		link(type='text/css' rel='stylesheet' href='../public/stylesheets/style.css')
+	body
+		div.container
+			div.row
+				div.col-md-7
+					embed(src="#{movies[0].flash}" allowFullScreen="true" quality="high" width="720px" height="500px" align="middle" type="applicaption/x-shockwave-flash")
+				div.col-md-5
+					div.dl-horizontal
+						dt 电影名称：
+						dd=movies[0].title
+						dt 导演：
+						dd=movies[0].director
+						dt 上映年份：
+						dd=movies[0].year
+						dt 国家：
+						dd=movies[0].country
+						dt 语言：
+						dd=movies[0].language
+						dt 简介：
+						dd=movies[0].summary
